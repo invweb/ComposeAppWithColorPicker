@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppWithColorPicker</string>
+    <string name="example">Example</string>
 </resources>

@@ -74,7 +74,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun TextExample(color: Color) {
         Text(
-            text = "Пример цвета",
+            text = getString(R.string.example),
             modifier = Modifier.padding(start = 8.dp, top = 8.dp, end = 8.dp),
             color = color
         )
