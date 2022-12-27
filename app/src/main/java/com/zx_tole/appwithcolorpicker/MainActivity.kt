@@ -13,8 +13,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.github.skydoves.colorpicker.compose.ColorEnvelope
 import com.github.skydoves.colorpicker.compose.ImageColorPicker
 import com.github.skydoves.colorpicker.compose.PaletteContentScale
@@ -42,7 +40,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun Picker() {
-        var color: Color = Color.Black
+        var color: Color
 
         val controller = rememberColorPickerController()
         ImageColorPicker(
@@ -57,7 +55,7 @@ class MainActivity : ComponentActivity() {
             onColorChanged = { colorEnvelope: ColorEnvelope ->
                 color = colorEnvelope.color
                 setContent {
-                    changeTextColor(color = color)
+                    ChangeTextColor(color = color)
                     Picker()
                 }
             }
@@ -67,7 +65,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun changeTextColor(color: Color) {
+    fun ChangeTextColor(color: Color) {
             TextExample(color = color)
     }
 
