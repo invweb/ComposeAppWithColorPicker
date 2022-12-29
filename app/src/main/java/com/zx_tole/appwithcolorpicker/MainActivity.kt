@@ -19,7 +19,6 @@ import com.github.skydoves.colorpicker.compose.PaletteContentScale
 import com.github.skydoves.colorpicker.compose.rememberColorPickerController
 import com.zx_tole.appwithcolorpicker.ui.theme.AppWithColorPickerTheme
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
